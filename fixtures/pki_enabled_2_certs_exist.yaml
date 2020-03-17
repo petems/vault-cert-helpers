@@ -1,0 +1,72 @@
+---
+version: 1
+interactions:
+- request:
+    body: ""
+    form: {}
+    headers:
+      X-Vault-Token:
+      - ROOT
+    url: http://127.0.0.1:8200/v1/pki/certs?list=true
+    method: GET
+  response:
+    body: |
+      {"request_id":"1254d2b5-d98c-98cd-6aeb-f5d3d016767f","lease_id":"","renewable":false,"lease_duration":0,"data":{"keys":["17-8d-25-c3-66-37-81-eb-64-c6-84-5c-46-5b-42-8b-fd-12-bf-1d","2e-88-a1-89-5a-df-e1-e6-dd-57-e9-47-78-e1-74-24-73-a3-38-c2"]},"wrap_info":null,"warnings":null,"auth":null}
+    headers:
+      Cache-Control:
+      - no-store
+      Content-Length:
+      - "292"
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 19 Mar 2020 19:55:43 GMT
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      X-Vault-Token:
+      - ROOT
+    url: http://127.0.0.1:8200/v1/pki/cert/17-8d-25-c3-66-37-81-eb-64-c6-84-5c-46-5b-42-8b-fd-12-bf-1d
+    method: GET
+  response:
+    body: |
+      {"request_id":"69e618ad-f4a3-bf38-7c96-cd165f5e3183","lease_id":"","renewable":false,"lease_duration":0,"data":{"certificate":"-----BEGIN CERTIFICATE-----\nMIIDNTCCAh2gAwIBAgIUF40lw2Y3getkxoRcRltCi/0Svx0wDQYJKoZIhvcNAQEL\nBQAwFjEUMBIGA1UEAxMLZXhhbXBsZS5jb20wHhcNMjAwMzE5MTkzODU3WhcNMjAw\nNDIwMTkzOTI3WjAWMRQwEgYDVQQDEwtleGFtcGxlLmNvbTCCASIwDQYJKoZIhvcN\nAQEBBQADggEPADCCAQoCggEBAPLI8vlCe3cwHnIgP8IlB3eN771EMDAN6WSx+NRN\nDuKYYo5UkDI5/7qyzb1+MJvcMcPf8tq1mrza7vMbuRz9ClFojSGQsW5PZmtxDlMw\nxS+7Mh4+911VweyKCmV3JM928psWZig9Hmv4K8wDc4t5aKuN207aCruMsWlVGhLp\nnoQTxNudmidok8zvp0+MwuCnkLI5z0Vkk31jpxu67QNwLPSHqHESyjzMfngh2CT2\nSW/IvzituoPfRhJM/Kx97OjwQaaq3qrcaToOU8h8kmGCaH79EhyT5txM3WRAPwrk\nfbN7IHNkGI2wSWxIVAOYYch5apnKp74bbyDUEUPbosSRTOMCAwEAAaN7MHkwDgYD\nVR0PAQH/BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFKSoCkprcAdE\npdmHXHKgyZ6fIHhFMB8GA1UdIwQYMBaAFKSoCkprcAdEpdmHXHKgyZ6fIHhFMBYG\nA1UdEQQPMA2CC2V4YW1wbGUuY29tMA0GCSqGSIb3DQEBCwUAA4IBAQDMxu7UX0an\nkEJoouwiIjUl+Okxfe7dIMMlEiD86gT6ZEs1lLf8EHGEUDdpQp0dC+60BSeQMvqV\nGg2ov0ueHxeBaBwG1/rmkKLwetnK1q/uQIP08sw9tREulI+TggiZVptZtrXG81Bh\np1VCS0UUZnoHkkH5qUWvSQd+Hn+oR580RyFBJfHlDcB8EVIv9gC6+lM/RNh5XmQg\nqTDbq+iAWKK8nmC8cAEMCWHLC8+S8c+22seVqlwg/gZM8etIsej1ixIl5nQo9eRz\nzM7uyRfakpMj3g/UuP/50Ki0w129MbSB4skQ5HcJTAGmt6wBlpl4yLCoxwCx2xYT\nTfJiL4j4rpW2\n-----END CERTIFICATE-----","revocation_time":0},"wrap_info":null,"warnings":null,"auth":null}
+    headers:
+      Cache-Control:
+      - no-store
+      Content-Length:
+      - "1386"
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 19 Mar 2020 19:55:43 GMT
+    status: 200 OK
+    code: 200
+    duration: ""
+- request:
+    body: ""
+    form: {}
+    headers:
+      X-Vault-Token:
+      - ROOT
+    url: http://127.0.0.1:8200/v1/pki/cert/2e-88-a1-89-5a-df-e1-e6-dd-57-e9-47-78-e1-74-24-73-a3-38-c2
+    method: GET
+  response:
+    body: |
+      {"request_id":"8b294486-74a2-33ed-9f37-26dbde3f9401","lease_id":"","renewable":false,"lease_duration":0,"data":{"certificate":"-----BEGIN CERTIFICATE-----\nMIIDTTCCAjWgAwIBAgIULoihiVrf4ebdV+lHeOF0JHOjOMIwDQYJKoZIhvcNAQEL\nBQAwFjEUMBIGA1UEAxMLZXhhbXBsZS5jb20wHhcNMjAwMzE5MTkzODU3WhcNMjAw\nMzIyMTkzOTI3WjAaMRgwFgYDVQQDEw92Y2guZXhhbXBsZS5jb20wggEiMA0GCSqG\nSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDd5kXdMpmIME5uaJmZYKGzxt5xIpVj4r6/\n6WQFAkXv3W2y9wRRZsn7sa2ReK1nS7t1uOfuTJOcRNJRrjjH83m5y+6b5AG4MvOC\nfdKJhPgIMm1TpByXei3XsASlCdDcAvVYUDV9XBf4gZDvyWt40sNbsFA8+EoQwILn\nez83ZHuALjmtEOvzzReeVbsKh6Jnj/0hLMf10qyzeZyNrxrz8da6XOpKFOwTgX9j\n6nlzyrX7bAAV7rjGhvdJCL8EUc9BcIA5mDPix1YGHmqnrLv9eKoYMC+AOosyWrhP\nk8eigERXQue2dzUer0/SvsaevrOXfUtSEI583ohoH+HuHY+8cGLbAgMBAAGjgY4w\ngYswDgYDVR0PAQH/BAQDAgOoMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcD\nAjAdBgNVHQ4EFgQUgsDOnP79NLvYl0xz+PrFf1do02owHwYDVR0jBBgwFoAUpKgK\nSmtwB0Sl2YdccqDJnp8geEUwGgYDVR0RBBMwEYIPdmNoLmV4YW1wbGUuY29tMA0G\nCSqGSIb3DQEBCwUAA4IBAQCa10A23lJoxNYpS8HYgyq6wpP4h+ZIu5TNEJshDUe+\nhhZiE1ejg8Sr5wLy5VRfBDGod8VKEjh35oRHvM1aHxrM/SLNldYiCS5MNzqPdXeB\nasl/rY+Q39FQ/9sgdPkmaeeBjuSCMv0ym0UFQjpEYj7jo/JONeYI3AV8oARTBxNe\neKE9Qg8u7R143u69OzQ3sgZU9uoJJLxyTpOy7q4p8d/HlzikXsi4NFaD8eqVkWxn\nvLSArU5D4r+NS3K5B2tjyLVB2q5tzSns7tmFeukMaOGfEJZrcaurO9iehRCUYeoy\ncq5e8nVE7FFEwBp0TqSgaRePD0YC4RKi5awlopKxpdVo\n-----END CERTIFICATE-----","revocation_time":0},"wrap_info":null,"warnings":null,"auth":null}
+    headers:
+      Cache-Control:
+      - no-store
+      Content-Length:
+      - "1418"
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 19 Mar 2020 19:55:43 GMT
+    status: 200 OK
+    code: 200
+    duration: ""

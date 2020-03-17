@@ -1,0 +1,26 @@
+---
+version: 1
+interactions:
+- request:
+    body: ""
+    form: {}
+    headers:
+      X-Vault-Token:
+      - ROOT
+    url: http://127.0.0.1:8200/v1/pki_no_certs/certs?list=true
+    method: GET
+  response:
+    body: |
+      {"errors":[]}
+    headers:
+      Cache-Control:
+      - no-store
+      Content-Length:
+      - "14"
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 19 Mar 2020 19:55:43 GMT
+    status: 404 Not Found
+    code: 404
+    duration: ""
