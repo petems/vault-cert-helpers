@@ -6,7 +6,7 @@ import (
 
 	"github.com/hashicorp/vault/api"
 
-	. "github.com/petems/vault-cert-helpers"
+	hlpr "github.com/petems/vault-cert-helpers"
 )
 
 func createVaultClient() *api.Client {
@@ -31,13 +31,17 @@ func main() {
 	vaultClient := createVaultClient()
 
 	// Get list of certs from /pki endpoint
-	listOfCertsSecret, err := GetListOfCerts(vaultClient, "pki")
+	listOfCertsSecret, err := hlpr.GetListOfCerts(vaultClient, "pki")
 
 	if err != nil {
 		panic(err)
 	}
 
-	arrayOfCerts, err := GetArrayOfCertsFromVault(vaultClient, listOfCertsSecret, "pki")
+	arrayOfCerts, err := hlpr.GetArrayOfCertsFromVault(vaultClient, listOfCertsSecret, "pki")
+
+	if err != nil {
+		panic(err)
+	}
 
 	fmt.Printf("First cert CN is: %s\n", arrayOfCerts[0].Subject.CommonName)
 	fmt.Printf("Second cert CN is: %s\n", arrayOfCerts[1].Subject.CommonName)

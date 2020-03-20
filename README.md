@@ -1,4 +1,5 @@
 # vault-cert-helpers
+![Run lint and tests on Go code](https://github.com/petems/vault-cert-helpers/workflows/Run%20lint%20and%20tests%20on%20Go%20code/badge.svg)
 
 A helper class to iterate through certs from Vault
 
