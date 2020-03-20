@@ -7,7 +7,7 @@ Mostly an excuse to help me learn [go-vcr](https://github.com/dnaeon/go-vcr/) fo
 
 ## Usage
 
-```
+```go
 package main
 
 import (
