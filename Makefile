@@ -17,9 +17,7 @@ lint: ## Verifies `golangci-lint` passes
 
 .PHONY: cover
 cover: ## Runs go test with coverage
-	@for d in $(shell go list ./... | grep -v vendor); do \
-		go test -race -coverprofile=profile.out -covermode=atomic "$$d"; \
-	done;
+	@go test -race -coverprofile=profile.out -covermode=atomic
 
 .PHONY: cover_html
 cover_html: cover ## Runs go test with coverage
